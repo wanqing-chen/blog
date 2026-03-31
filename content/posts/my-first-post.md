@@ -1,39 +1,24 @@
-+++
-date = '2026-03-27T13:26:24+08:00'
-draft = false
-title = "我的第一篇文章"
+---
+title: "从 0 到 1： Hugo 自动化博客构建指南"
+date: 2026-03-30T20:00:00+08:00
+draft: false
+description: "记录基于 Hugo + PaperMod + GitHub Actions 搭建个人技术博客的标准工作流。"
+categories: ["技术工程"]
+tags: ["Hugo", "CI/CD", "Workflow"]
+---
 
-+++
+作为一名大数据工程师，构建高效的知识沉淀体系与构建数据中台同样重要。本站基于 Hugo 构建，旨在记录关于 Flink、Paimon 及 AI 架构的思考。
 
-这是我的第一篇 Hugo 文章！ 
+## 🛠️ 博客维护：标准三步走
 
-## 标题
+### 1. 创作与预览
+在本地环境（VS Code）进行内容产出：
+- **新建文章**：在 `content/posts/` 目录下创建 `.md` 文件。
+- **本地预览**：运行 `hugo server -D` 并在浏览器查看效果。
 
-Hugo 使用 CommonMark Markdown 规范，支持各种 Markdown 语法。 
-
-- 列表项 1
-- 列表项 2
-- 列表项 3
-
-**粗体文本** 和 *斜体文本*。
-
-## Hugo 博客更新：标准三步走
-### 第一步：创作阶段（在本地 VS Code）
-- 新建文章：在 content/posts/ 目录下新建一个 .md 文件（或者复制旧的改名）
-- 检查 date 日期（不要早于当前时间太久，也不要晚于当前时间）。
-- 在终端运行 hugo server。
-- 打开浏览器访问 http://localhost:1313 检查排版。
-- 满意后按下 Ctrl + C 停止服务。
-
-### 第二步：推送阶段（在终端敲 3 行命令）
-- git add .
-- git commit -m "feat: 新增一篇文章"
-- git push origin main
-
-⚠️ 特别提醒（新手易错点）：
-不要管 public 文件夹：如果以后看到 public 文件夹里有一堆 HTML，不用去理会它，更不要手动改里面的代码，因为 GitHub Actions 每次都会重新生成并覆盖它。
-
-自动保存：既然你开启了 VS Code 自动保存，写完代码直接去终端执行 git push 即可，不用担心没存上。
-
-图片处理：如果你要在文章里插图，把图片放在 static/images/ 目录下，然后在 Markdown 里引用 /images/xxx.jpg 即可。
-
+### 2. 推送更新
+通过 Git 将源码推送到 GitHub：
+```bash
+git add .
+git commit -m "feat: content update"
+git push origin main

@@ -1,0 +1,155 @@
+markup:
+  goldmark:
+    renderer:
+      unsafe: true  # 必须设为 true 才能显示 <img> 标签
+
+baseURL: 'https://wanqing-chen.github.io/'
+title: "CWQ | Big Data Architecture"
+LanguageCode: "zh-CN"
+theme: "PaperMod"
+
+# 启用首页个人简介展示
+params:
+  defaultTheme: dark
+  # 是否启用评论。你需要自己配置，或者直接引入Giscus等评论系统
+  comments: false
+  # 是否显示代码复制按钮
+  ShowCodeCopyButtons: true
+  # 是否显示面包屑导航
+  ShowBreadCrumbs: false
+  # 是否显示阅读时间  
+  ShowReadingTime: true
+  # 是否显示分享按钮
+  ShowShareButtons: true
+  # 分享按钮配置
+  # ShareButtons: ["linkedin", "twitter"]
+  # 是否禁用主题切换按钮
+  disableThemeToggle: false
+  assets:
+    favicon: "/img/favicon.png" # 需要在static文件夹放置对应的图片
+    iconHeight: 35
+  # 首页信息配置
+  homeInfoParams:
+    Title: "Hi there, I'm cwq 👋"
+    Content: >
+      <div style="font-size: 1.1rem; line-height: 1.8; margin-top: 20px;">
+        <p style="font-weight: 600; color: #3b82f6;">🚀 Senior Big Data Engineer @ Shenzhen</p>
+        
+        <p style="margin: 15px 0;">
+          专注于 <b>实时/离线数仓建设</b>，在企业级大数据生态的开发与运维方面拥有丰富经验。
+        </p>
+
+        <div style="background: rgba(128, 128, 128, 0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6;">
+          <p style="margin: 0; font-size: 0.95rem;">
+            🛠️ <b>技术栈</b>：<br>
+            <code style="color: #60a5fa;">Flink</code> · <code style="color: #60a5fa;">Paimon</code> · <code style="color: #60a5fa;">Spark</code> · <code style="color: #60a5fa;">Hadoop</code> · <code style="color: #60a5fa;">Hive</code> · <code style="color: #60a5fa;">Java</code>
+          </p>
+        </div>
+
+        <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.8;">
+          🤖 <b>愿景</b>：持续探索 AI 与大数据架构的深度融合实践。
+        </p>
+
+        <p style="margin-top: 25px; font-style: italic; text-align: center; color: #9ca3af;">
+          "Never Stop Learning | 保持热爱，奔赴星海"
+        </p>
+      </div>
+
+  # 设置网站头像和首页头像
+ # 2. 开启 Profile Mode (这会隐藏首页的文章列表)
+  profileMode:
+    enabled: true
+    title: "Hi there, I'm cwq 👋"
+    subtitle: >
+      <div style="font-size: 1.1rem; line-height: 1.8; margin-top: 20px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto;">
+        <p style="font-weight: 600; color: #3b82f6;">🚀 Senior Big Data Engineer @ Shenzhen</p>
+        
+        <p style="margin: 15px 0; color: rgba(255,255,255,0.9);">
+          专注于 <b>实时/离线数仓建设</b>，在企业级大数据生态的开发与运维方面拥有丰富经验。
+        </p>
+
+        <div style="background: rgba(128, 128, 128, 0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #3b82f6; margin: 20px 0;">
+          <p style="margin: 0; font-size: 0.95rem;">
+            🛠️ <b>技术栈</b>：<br>
+            <code style="color: #60a5fa; background: none;">Flink</code> · <code style="color: #60a5fa; background: none;">Paimon</code> · <code style="color: #60a5fa; background: none;">Spark</code> · <code style="color: #60a5fa; background: none;">Hadoop</code> · <code style="color: #60a5fa; background: none;">Hive</code> · <code style="color: #60a5fa; background: none;">Java</code>
+          </p>
+        </div>
+
+        <p style="margin-top: 15px; font-size: 0.95rem; opacity: 0.8;">
+          🤖 <b>愿景</b>：持续探索 AI 与大数据架构的深度融合实践。
+        </p>
+
+        <p style="margin-top: 30px; font-style: italic; text-align: center; color: #9ca3af;">
+          "Never Stop Learning | 保持热爱，奔赴星海"
+        </p>
+      </div>
+
+      <style>
+        .profile_inner .buttons {
+          display: flex !important;
+          flex-wrap: nowrap !important; /* 强制不换行 */
+          justify-content: center !important;
+          gap: 10px !important;
+          margin-top: 25px !important;
+        }
+        .profile_inner .buttons .button {
+          margin: 0 !important;
+          padding: 8px 15px !important;
+          white-space: nowrap !important; /* 强制文字不换行 */
+          font-size: 14px !important;
+        }
+      </style>
+   
+    buttons:
+      - name: "📝 技术文章"
+        url: "/posts"
+      - name: "📚 归档"
+        url: "/archives"
+      - name: "🏷️ 标签云"
+        url: "/tags"
+      - name: "🔍 搜索"
+        url: "/search"
+
+  # 网站头像设置 (显示在导航栏)
+  label:
+    text: ""  # 把这里留空
+    icon: "/img/favicon.png" # 确保路径正确
+    iconHeight: 35
+
+  # 社交图标 (显示在简介下方)
+  # --- 社交链接 (会自动匹配图标) ---
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/wanqing-chen"
+    - name: "email"
+      url: "mailto:chasechen1024@163.com"
+    - name: "rss"
+      url: "/index.xml"
+
+# 顶部导航栏的快捷链接
+menu:
+  main:
+    - identifier: categories
+      name: 分类
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 20
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 30
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 40
+    # 可以添加更多导航链接。weight的值越高排序越靠后
+
+# 如果要启用搜索功能，需要添加这个
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # 必须，用于搜索功能
